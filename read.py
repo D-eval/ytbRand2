@@ -235,7 +235,6 @@ class StackDataset(Dataset):
         audio = torch.tensor(audio_seg.T).float()  # (T,C)
         return audio, target
 
-
 def collate_fn(batch):
     audios = []
     targets = []
