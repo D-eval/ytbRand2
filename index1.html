@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>随机标注本</title>
+  <link rel="stylesheet" href="index1.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section id="startPage" class="panel start-page">
+      <h1>随机标注本</h1>
+      <p class="meta">先选择保存目录，再进入标注页。</p>
+      <div class="row">
+        <input id="saveDirInput" type="text" placeholder="保存目录（绝对路径）" value="./data" />
+        <button id="enterBtn">开始</button>
+      </div>
+    </section>
+
+    <section id="annotPage" class="annot-page hidden">
+    <header class="top">
+      <h1>随机标注本</h1>
+      <div class="actions">
+        <button id="nextBtn" class="ghost">下一个</button>
+        <button id="skipBtn" class="ghost">跳过</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <p id="status">未开始</p>
+      <audio id="audio" controls></audio>
+      <div class="timeline-controls">
+        <button id="addSplitBtn" type="button" class="ghost">创建分割线</button>
+        <span id="playheadLabel">0.000s / 0.000s</span>
+      </div>
+      <div class="mix-controls">
+        <label>原音频音量 <input id="audioVol" type="range" min="0" max="1" step="0.01" value="0.85" /></label>
+        <label>扒谱音量 <input id="noteVol" type="range" min="0" max="1" step="0.01" value="0.35" /></label>
+        <button id="mixPlayBtn" type="button" class="ghost">混合播放</button>
+      </div>
+      <div id="meta" class="meta"></div>
+    </section>
+
+    <section class="panel roll-wrap">
+      <div class="ruler-spacer"></div>
+      <canvas id="ruler" width="900" height="28"></canvas>
+      <canvas id="piano" width="64" height="520"></canvas>
+      <div class="roll-main">
+        <canvas id="spec" width="900" height="520"></canvas>
+        <canvas id="notes" width="900" height="520"></canvas>
+      </div>
+    </section>
+
+    <section class="panel form">
+      <label>
+        text
+        <textarea id="text" rows="3" placeholder="输入文本标注"></textarea>
+      </label>
+      <label>
+        midi（自动由卷帘生成，可手改）
+        <input id="midi" type="text" placeholder="例如: 60,64,67" />
+      </label>
+    </section>
+    </section>
+  </main>
+  <script src="index1.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+:root {
+  --bg: #f3f5f8;
+  --card: #fff;
+  --ink: #17212b;
+  --line: #d7deea;
+  --main: #1d66d1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(150deg, #f8fbff, var(--bg)); color: var(--ink); font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px; }
+.hidden { display: none; }
+.start-page h1 { margin-top: 0; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row input { flex: 1; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.actions { display: flex; gap: 10px; }
+.panel { margin-top: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+button { border: 0; border-radius: 10px; padding: 10px 14px; background: var(--main); color: #fff; cursor: pointer; }
+button.ghost { background: #dce9ff; color: #184fa5; }
+audio { width: 100%; margin-top: 8px; }
+.timeline-controls { margin-top: 8px; display: flex; gap: 10px; align-items: center; }
+.timeline-controls span { font-size: 12px; color: #5a697a; min-width: 130px; }
+.mix-controls { display: flex; align-items: center; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
+.mix-controls label { display: inline-flex; align-items: center; gap: 8px; }
+.mix-controls input[type="range"] { width: 140px; }
+.meta { margin-top: 8px; font-size: 13px; color: #5a697a; }
+.roll-wrap { display: grid; grid-template-columns: 64px 1fr; grid-template-rows: 28px 520px; gap: 0; }
+.ruler-spacer { border-right: 0; border-bottom: 1px solid var(--line); }
+#ruler { width: 900px; max-width: 100%; height: 28px; border: 1px solid var(--line); border-left: 0; cursor: pointer; }
+.roll-main { position: relative; width: 900px; max-width: 100%; }
+#spec, #notes { position: absolute; left: 0; top: 0; width: 100%; height: 520px; }
+#spec { z-index: 1; border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+#notes { z-index: 2; }
+#piano { border: 1px solid var(--line); border-right: 0; }
+.form { display: grid; gap: 10px; }
+label { display: grid; gap: 6px; }
+input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 8px; font-size: 14px; }
